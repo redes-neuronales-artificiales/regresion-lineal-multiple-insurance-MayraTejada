@@ -92,10 +92,10 @@ def pregunta_03():
             (
                 "column_transfomer",
                 ColumnTransformer(
-                    ("onehotencoder"
+                    [("onehotencoder"
                         OneHotEncoder(),
                         make_column_selector(dtype_include=object),
-                    ),
+                    )],
                     remainder=remainder="passthrough",
                 ),
             ),
